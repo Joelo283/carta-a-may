@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta para Mayte 💌</title>
+    <style>
+        body {
+            background-color: #fff0f5;
+            font-family: 'Courier New', Courier, monospace;
+            color: #4b0082;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 5vw;
+            margin-bottom: 20px;
+        }
+
+        #carta {
+            white-space: pre-wrap;
+            border-left: 3px solid #4b0082;
+            padding-left: 16px;
+            font-size: 4.5vw;
+            max-width: 90vw;
+        }
+
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            #carta {
+                font-size: 1.1em;
+                max-width: 600px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1>💗 Carta para Mayte 💗</h1>
+<div id="carta"></div>
+
+<script>
+    const texto = `Para: Mayte 💌
+De: La persona que lo tienes loco por un beso tuyo 💗
+
+Querida May.....
+Eres tan fácil de querer y tan difícil de olvidar...
+Esto que siento no es normal. Tú llegaste a mi vida a mejorar.
+QUIERO MIL VIDA CONTIGO.
+La luna me habla de ti cada vez que la miro.
+Yo vivía sin sentido, pero esos ojitos me estan dan motivo.
+Cada que te me vas, se me va la paz...
+Te amo, baby 💖`;
+
+    const cartaDiv = document.getElementById('carta');
+    let i = 0;
+
+    function escribirLento() {
+        if (i < texto.length) {
+            cartaDiv.innerHTML += texto.charAt(i);
+            i++;
+            setTimeout(escribirLento, 80);
+        }
+    }
+
+    escribirLento();
+</script>
+
+</body>
+</html>
+
